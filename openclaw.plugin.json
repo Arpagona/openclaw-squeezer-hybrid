@@ -1,0 +1,33 @@
+{
+  "id": "squeezer-hybrid",
+  "name": "Squeezer Hybrid",
+  "description": "Compress text and extract structured metadata like actions, entities, and states for OpenClaw workflows.",
+  "version": "0.1.0",
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": ["squeeze_context"]
+  },
+  "toolMetadata": {
+    "squeeze_context": {
+      "optional": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "defaultMode": {
+        "type": "string",
+        "enum": ["standard", "aggressive", "ultra"],
+        "default": "standard"
+      },
+      "maxInputChars": {
+        "type": "integer",
+        "minimum": 100,
+        "default": 20000
+      }
+    }
+  }
+}
