@@ -8,6 +8,7 @@ Squeezer Hybrid is an OpenClaw plugin that compresses raw text and extracts stru
 - metadata extraction
 - modes: `standard`, `aggressive`, `ultra`
 - tool exposed to OpenClaw: `squeeze_context`
+- compaction provider id: `squeezer-hybrid`
 
 ## Install
 
@@ -54,5 +55,8 @@ Output:
 
 ## Status
 
-V1 focuses on a clean installable tool plugin.
-It is not yet a full replacement for native OpenClaw compaction.
+V1 exposes both:
+- a callable tool
+- a basic compaction provider for OpenClaw safeguard compaction
+
+The provider is intentionally simple and should be treated as an experimental first production path, not a final high-fidelity summarizer.
